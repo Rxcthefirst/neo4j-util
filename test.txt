@@ -1,0 +1,26 @@
+items: [
+{ type: 'node', id: "Mortgage Loan", u: "assets/images/icons/bank.png", t: "Mortgage Loan", definition: "A mortgage loan is ...", semanticType: "Subject Area", visibility: 1, label: "Mortgage Loan" },
+{ type: 'node', id: "Loan", u: "assets/images/icons/bank.png", t: "Loan", definition: "...",semanticType: "Entity",visibility: 2,label: "Loan" },
+{ type: 'node', id: "Financial Instrument", u: "assets/images/icons/bank.png", t: "Financial Instrument", definition: "A Financial Instrument ...", semanticType: "Entity", visibility: 2, label: "Financial Instrument" },
+{ type: 'node', id: "Adjustable Rate Mortgage", u: "assets/images/icons/bank.png",t: "Adjustable Rate Mortgage",definition: "A mortgage loan ...",semanticType: "Entity",visibility: 2,label: "Adjustable Rate Mortgage" },
+{ type: 'node', id: "Fixed Rate Mortgage", u: "assets/images/icons/bank.png", t: "Fixed Rate Mortgage", definition: "A mortgage loan ...", semanticType: "Entity", visibility: 2,label: "Fixed Rate Mortgage" },
+{ type: 'node', id: "Reverse Mortgage", u: "assets/images/icons/bank.png", t: "Reverse Mortgage", definition: "...", semanticType: "Entity", visibility: 2, label: "Reverse Mortgage" },
+{ type: 'node', id: "Loan State", u: "assets/images/icons/bank.png", t: "Loan State", definition: "...", semanticType: "Phase", visibility: 2, label: "Loan State" },
+{ type: 'node', id: "Borrower", u: "assets/images/icons/bank.png", t: "Borrower", definition: "...", semanticType: "Role", visibility: 2, label: "Borrower" },
+{ type: 'node', id: "Real Property", u: "assets/images/icons/bank.png", t: "Real Property", definition: "...", semanticType: "Role", visibility: 2, label: "Real Property" },
+{ type: 'node', id: "Party Group", u: "assets/images/icons/bank.png",t: "Party Group", definition: "...", semanticType: "Entity", visibility: 2, label: "Party Group" },
+{ type: "node", id: "Loan Seller", u: "assets/images/icons/bank.png", t: "Loan Seller",definition: "...",semanticType: "Role",visibility: 2,label: "Loan Seller" }
+
+{ type: 'link', id: "e1", id1: "Mortgage Loan", id2: "Financial Instrument", label: "hasGeneral", c: "#79a331", a1: true },
+{ type: 'link', id: "e2", id1: "Mortgage Loan", id2: "Loan", label: "referencedBySubjectArea", c: "#79a331" },
+{ type: 'link', id: "e3", id1: "Mortgage Loan", id2: "Adjustable Rate Mortgage", label: "hasSpecific", c: "#79a331", a1: true },
+{ type: 'link', id: "e4", id1: "Mortgage Loan", id2: "Fixed Rate Mortgage", label: "hasSpecific", c: "#79a331", a2: true },
+{ type: 'link', id: "e5", id1: "Mortgage Loan", id2: "Reverse Mortgage", label: "hasSpecific", c: "#79a331", a1: true },
+{ type: 'link', id: "e6", id1: "Mortgage Loan", id2: "Loan State", label: "hasFacet", c: "#79a331", a2: true },
+{ type: 'link', id: "e7", id1: "Mortgage Loan", id2: "Borrower", label: "has debtor", c: "#79a331", a1: true },
+{ type: 'link', id: "e8", id1: "Mortgage Loan", id2: "Real Property", label: "is collateralized by", c: "#79a331", a2: true },
+{ type: 'link', id: "e9", id1: "Mortgage Loan", id2: "Party Group", label: "has responsible group", c: "#79a331", a1: true },
+{ type: 'link', id: "e10", id1: "Mortgage Loan", id2: "Loan Seller", label: "is sold by", c: "#79a331", a2: true },
+{ type: 'link', id: "e11", id1: "Loan Seller", id2: "Mortgage Loan", label: "also has a", c: "#79a331", a1: true }
+]
+
