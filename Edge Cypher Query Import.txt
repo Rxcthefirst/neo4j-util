@@ -1,0 +1,6 @@
+UNWIND [{source: "Mortgage Loan", target: "Financial Instrument", label: "hasGeneral", custom_property: "value"},{source: "Mortgage Loan", target: "Loan", label: "referencedBySubjectArea", custom_property: "value"},{source: "Mortgage Loan", target: "Adjustable Rate Mortgage", label: "hasSpecific", custom_property: "value"    },    {source: "Mortgage Loan", target: "Fixed Rate Mortgage", label: "hasSpecific", custom_property: "value"}, {source: "Mortgage Loan", target: "Reverse Mortgage", label: "hasSpecific", custom_property: "value"}, {source: "Mortgage Loan", target: "Loan State", label: "hasFacet", custom_property: "value"}, {source: "Mortgage Loan", target: "Borrower", label: "has debtor", custom_property: "value"}, {source: "Mortgage Loan", target: "Real Property", label: "is collateralized by", custom_property: "value"}, {source: "Mortgage Loan", target: "Party Group", label: "has responsible group", custom_property: "value"}, {source: "Mortgage Loan", target: "Loan Seller", label: "is sold by", custom_property: "value"}, {source: "Mortgage Loan", target: "Loan Seller", label: "also has a", custom_property: "value"}] as edges
+
+MERGE (src:Node { name: edges.source })
+MERGE (tgt:Node { name: edges.target })
+
+MERGE (src)-[r:RELTYPE {    label: edges.label,    custom_property: edges.custom_property}]->(tgt)

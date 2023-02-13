@@ -1,0 +1,104 @@
+UNWIND [
+  {
+      id: "Mortgage Loan",
+      name: "Mortgage Loan",
+      definition: "A mortgage loan is ...",
+      semanticType: "Subject Area",
+      visibility: 1,
+      label: "Mortgage Loan",
+      custom_property: "value"
+  },
+  {
+      id: "Loan",
+      name: "Loan",
+      definition: "...",
+      semanticType: "Entity",
+      visibility: 2,
+      label: "Loan",
+      custom_property: "value"
+  },
+  {
+      id: "Financial Instrument",
+      name: "Financial Instrument",
+      definition: "A Financial Instrument ...",
+      semanticType: "Entity",
+	visibility: 2,
+      label: "Financial Instrument",
+      custom_property: "value"
+  },
+  {
+      id: "Adjustable Rate Mortgage",
+      name: "Adjustable Rate Mortgage",
+      definition: "A mortgage loan ...",
+      semanticType: "Entity",
+      visibility: 2,
+      label: "Adjustable Rate Mortgage",
+      custom_property: "value"
+  },
+  {
+      id: "Fixed Rate Mortgage",
+      name: "Fixed Rate Mortgage",
+      definition: "A mortgage loan ...",
+      semanticType: "Entity",
+      visibility: 2,
+      label: "Fixed Rate Mortgage",
+      custom_property: "value"
+  },
+  {
+      id: "Reverse Mortgage",
+      name: "Reverse Mortgage",
+      definition: "...",
+      semanticType: "Entity",
+      visibility: 2,
+      label: "Reverse Mortgage",
+      custom_property: "value"
+  },
+  {
+      id: "Loan State",
+      name: "Loan State",
+      definition: "...",
+      semanticType: "Phase",
+      visibility: 2,
+      label: "Loan State",
+      custom_property: "value"
+  },
+  {
+      id: "Borrower",
+      name: "Borrower",
+      definition: "...",
+      semanticType: "Role",
+      visibility: 2,
+      label: "Borrower",
+      custom_property: "value"
+  },
+  {
+      id: "Real Property",
+      name: "Real Property",
+      definition: "...",
+      semanticType: "Role",
+      visibility: 2,
+      label: "Real Property",
+      custom_property: "value"
+  },
+  {
+      id: "Party Group",
+      name: "Party Group",
+      definition: "...",
+      semanticType: "Entity",
+      visibility: 2,
+      label: "Party Group",
+      custom_property: "value"
+  },
+  {
+      id: "Loan Seller",
+	name: "Loan Seller",
+	definition: "...",
+	semanticType: "Role",
+	visibility: 2,
+	label: "Loan Seller",
+	custom_property: "value"
+  }
+] AS map
+MERGE (:`map.label` {id: map.id, name: map.name, definition: map.definition, semanticType: map.semanticType, visibility: map.visibility, custom_property: map.custom_property})
+
+
